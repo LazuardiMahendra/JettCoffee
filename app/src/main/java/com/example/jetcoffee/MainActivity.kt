@@ -20,9 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetCoffeeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android", modifier = Modifier.padding(innerPadding)
-                    )
+                    JettCoffeeApp()
                 }
             }
         }
@@ -30,16 +28,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!", modifier = modifier
-    )
+fun JettCoffeeApp(modifier: Modifier = Modifier) {
+    
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun JettCoffeeAppPreview() {
     JetCoffeeTheme {
-        Greeting("Android")
+        JettCoffeeApp("Android")
     }
 }
